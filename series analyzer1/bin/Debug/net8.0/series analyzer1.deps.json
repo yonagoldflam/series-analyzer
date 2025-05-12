@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "series analyzer1/1.0.0": {
+        "runtime": {
+          "series analyzer1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "series analyzer1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

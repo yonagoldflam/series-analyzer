@@ -1,0 +1,15 @@
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\bin\Debug\net8.0\series analyzer1.exe
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\bin\Debug\net8.0\series analyzer1.deps.json
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\bin\Debug\net8.0\series analyzer1.runtimeconfig.json
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\bin\Debug\net8.0\series analyzer1.dll
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\bin\Debug\net8.0\series analyzer1.pdb
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\obj\Debug\net8.0\series analyzer1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\obj\Debug\net8.0\series analyzer1.AssemblyInfoInputs.cache
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\obj\Debug\net8.0\series analyzer1.AssemblyInfo.cs
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\obj\Debug\net8.0\series analyzer1.csproj.CoreCompileInputs.cache
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\obj\Debug\net8.0\series analyzer1.sourcelink.json
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\obj\Debug\net8.0\series analyzer1.dll
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\obj\Debug\net8.0\refint\series analyzer1.dll
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\obj\Debug\net8.0\series analyzer1.pdb
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\obj\Debug\net8.0\series analyzer1.genruntimeconfig.cache
+C:\Users\HOME\OneDrive\שולחן העבודה\תרגול c#\series analyzer1\series analyzer1\obj\Debug\net8.0\ref\series analyzer1.dll
