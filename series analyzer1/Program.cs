@@ -76,7 +76,7 @@ namespace Example
         {
             while (true) //runs until valid input is received.
             {
-                Console.WriteLine("Enter a series of numbers containing at least three positive numbers. *Please separate the numbers with a comma - ',' *");
+                Console.WriteLine(SeriesInputInstructions());
                 string userInput = Console.ReadLine();
                 string[] stringArray = ConversionToStringArray(userInput);
                 int[] intArray = ConversionToIntArray(stringArray);
@@ -120,7 +120,7 @@ namespace Example
         
         static string[] ConversionToStringArray(string input)
         {
-            return input.Split(',');
+            return input.Split(',', ' ');
         }
         
         
@@ -272,6 +272,16 @@ namespace Example
         static bool CheckNums(int[] intArr)
         {
             return Len(intArr) > 0;
+        }
+
+
+        static string SeriesInputInstructions()
+        {
+            string ruls = "Enter a series of numbers; please note the rules:" + 
+                          "\n1. Enter only positive numbers" + 
+                          "\n2. Enter at least 3 numbers" +
+                          "\n3. Separate values ​​only with a comma **or** a space";
+            return ruls;
         }
     }
 }
