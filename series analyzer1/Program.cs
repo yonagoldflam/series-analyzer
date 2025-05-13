@@ -1,4 +1,6 @@
-﻿namespace Example
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Example
 {
     class Program()
     {
@@ -8,8 +10,12 @@
         }
 
         static void Manu(string[] stringArr)
-        {
+        {            
             int[] series = ConversionToIntArray(stringArr);
+            if (!CheckNums(series))
+            {
+                GetSeriesAndConvertToIntArray();
+            }
             bool clickedExit = false;
             while (!clickedExit)
             {
@@ -70,10 +76,10 @@
             while (true) //runs until valid input is received.
             {
                 Console.WriteLine("Enter a series of numbers containing at least three positive numbers. *Please separate the numbers with a comma - ',' *");
-                string text = Console.ReadLine();
-                string[] stringArray = ConversionToStringArray(text);
+                string userInput = Console.ReadLine();
+                string[] stringArray = ConversionToStringArray(userInput);
                 int[] intArray = ConversionToIntArray(stringArray);
-                if (Len(intArray) == 0)
+                if (!CheckNums(intArray))
                 {
                     Console.WriteLine("Your input does not contain only digits.");
                     continue;
@@ -260,6 +266,11 @@
                 sum += i;
             }
             return sum;
+        }
+        
+        static bool CheckNums(int[] intArr)
+        {
+            return Len(intArr) > 0;
         }
     }
 }
