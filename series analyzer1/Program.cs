@@ -128,19 +128,25 @@
                     return [];
                 }
             }
-
             return result;
         }
 
         
         static bool atLeast3PositiveNumbers(int[] input)
         {
-            bool isPositiveNumbers;
+            bool isPositiveNumber;
             int counter = 0;
             foreach (int i in input)
             {
-                isPositiveNumbers = i > 0 ? true : false;
-                counter += isPositiveNumbers ? 1 : 0;
+                isPositiveNumber = i > 0 ? true : false;
+                if (isPositiveNumber)
+                {
+                    counter++;
+                }
+                else
+                {
+                    return false;
+                }
             }
             return counter > 2;
         }
