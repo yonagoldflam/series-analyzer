@@ -4,53 +4,53 @@
     {
         static void Main(string[] args)
         {
-            manu(args);
+            Manu(args);
         }
 
-        static void manu(string[] stringArr)
+        static void Manu(string[] stringArr)
         {
-            int[] series = conversionToIntArray(stringArr);
+            int[] series = ConversionToIntArray(stringArr);
             bool clickedExit = false;
             while (!clickedExit)
             {
-                printMenu();
-                string choose = getChoice();
+                PrintMenu();
+                string choose = GetChoice();
                 switch (choose)
                 {
                     case "a":
-                        series = getSeriesAndConvertToIntArray();
+                        series = GetSeriesAndConvertToIntArray();
                         break;
 
                     case "b":
-                        printSeries(series);
+                        PrintSeries(series);
                         break;
 
                     case "c":
-                        printSeries(reverse(series));
+                        PrintSeries(Reverse(series));
                         break;
 
                     case "d":
-                        printSeries(bubbleSort(series));
+                        PrintSeries(BubbleSort(series));
                         break;
 
                     case "e":
-                        Console.WriteLine(maxValue(series));
+                        Console.WriteLine(MaxValue(series));
                         break;
 
                     case "f":
-                        Console.WriteLine(minValue(series));
+                        Console.WriteLine(MinValue(series));
                         break;
 
                     case "g":
-                        Console.WriteLine(average(series));
+                        Console.WriteLine(Average(series));
                         break;
 
                     case "h":
-                        Console.WriteLine(len(series));
+                        Console.WriteLine(Len(series));
                         break;
 
                     case "i":
-                        Console.WriteLine(sum(series));
+                        Console.WriteLine(Sum(series));
                         break;
 
                     case "j":
@@ -65,20 +65,20 @@
             }
         }
 
-        static int[] getSeriesAndConvertToIntArray()
+        static int[] GetSeriesAndConvertToIntArray()
         {
             while (true) //runs until valid input is received.
             {
                 Console.WriteLine("Enter a series of numbers containing at least three positive numbers. *Please separate the numbers with a comma - ',' *");
                 string text = Console.ReadLine();
-                string[] stringArray = conversionToStringArray(text);
-                int[] intArray = conversionToIntArray(stringArray);
-                if (len(intArray) == 0)
+                string[] stringArray = ConversionToStringArray(text);
+                int[] intArray = ConversionToIntArray(stringArray);
+                if (Len(intArray) == 0)
                 {
                     Console.WriteLine("Your input does not contain only digits.");
                     continue;
                 }
-                else if (!atLeast3PositiveNumbers(intArray))
+                else if (!AtLeast3PositiveNumbers(intArray))
                 {
                     Console.WriteLine("Your input does not contain at least three positive digits.");
                     continue;
@@ -89,7 +89,7 @@
         }
 
         
-        static int len(int[] intArray)
+        static int Len(int[] intArray)
         {
             int counter = 0;
             foreach (int i in intArray)
@@ -100,7 +100,7 @@
         }
 
         
-        static int len(string[] intArray)
+        static int Len(string[] intArray)
         {
             int counter = 0;
             foreach (string i in intArray)
@@ -111,15 +111,15 @@
         }
 
         
-        static string[] conversionToStringArray(string input)
+        static string[] ConversionToStringArray(string input)
         {
             return input.Split(',');
         }
         
         
-        static int[] conversionToIntArray(string[] input)
+        static int[] ConversionToIntArray(string[] input)
         {
-            int[] result = new int[len(input)];
+            int[] result = new int[Len(input)];
             for (int i = 0; i < input.Length; i++)
             {
                 bool isNum = int.TryParse(input[i], out result[i]);
@@ -132,7 +132,7 @@
         }
 
         
-        static bool atLeast3PositiveNumbers(int[] input)
+        static bool AtLeast3PositiveNumbers(int[] input)
         {
             bool isPositiveNumber;
             int counter = 0;
@@ -152,7 +152,7 @@
         }
 
         
-        static void printMenu()
+        static void PrintMenu()
         {
             string txtMenu = "press a to Input a Series." +
                             "\npress b to Display the series in the order it was entered." +
@@ -168,14 +168,14 @@
         }
 
 
-        static string getChoice()
+        static string GetChoice()
         {
             var choose = Console.ReadLine();
             return choose != null ? choose : "aa";
         }
 
         
-        static void printSeries(int[] intArray)
+        static void PrintSeries(int[] intArray)
         {
             foreach (int i in intArray)
             {
@@ -184,11 +184,11 @@
         }
         
         
-        static int[] reverse(int[] intArray)
+        static int[] Reverse(int[] intArray)
         {
-            int[] reversedArr = new int[len(intArray)];
+            int[] reversedArr = new int[Len(intArray)];
             int tup = 0;
-            for (int i = len(intArray) - 1; i >= 0; i--)
+            for (int i = Len(intArray) - 1; i >= 0; i--)
             {
                 reversedArr[tup] = intArray[i];
                 tup++;
@@ -197,12 +197,12 @@
         }
 
         
-        static int[] bubbleSort(int[] intArray)
+        static int[] BubbleSort(int[] intArray)
         {
-            for (int i = 0; i < len(intArray); i++)
+            for (int i = 0; i < Len(intArray); i++)
             {
                 bool flag = true;
-                for (int j = 0; j < len(intArray) - i - 1; j++)
+                for (int j = 0; j < Len(intArray) - i - 1; j++)
                 {
                     if (intArray[j] > intArray[j + 1])
                     {
@@ -222,7 +222,7 @@
         }
 
         
-        static int maxValue(int[] intArray)
+        static int MaxValue(int[] intArray)
         {
             int max = intArray[0];
             foreach (int i in intArray)
@@ -233,7 +233,7 @@
         }
 
         
-        static int minValue(int[] intArray)
+        static int MinValue(int[] intArray)
         {
             int min = intArray[0];
             foreach (int i in intArray)
@@ -244,15 +244,15 @@
         }
 
         
-        static double average(int[] intArray)
+        static double Average(int[] intArray)
         {
 
-            double leng = len(intArray);
-            return sum(intArray) / leng;
+            double len = Len(intArray);
+            return Sum(intArray) / len;
         }
 
         
-        static int sum(int[] intArray)
+        static int Sum(int[] intArray)
         {
             int sum = 0;
             foreach (int i in intArray)
