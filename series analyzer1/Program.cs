@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.ComponentModel.DataAnnotations;
 
 namespace Example
 {
@@ -12,9 +13,9 @@ namespace Example
         static void Manu(string[] stringArr)
         {            
             int[] series = ConversionToIntArray(stringArr);
-            if (!CheckNums(series))
+            if (!CheckNums(series) || !AtLeast3PositiveNumbers(series))
             {
-                GetSeriesAndConvertToIntArray();
+                series = GetSeriesAndConvertToIntArray();
             }
             bool clickedExit = false;
             while (!clickedExit)
